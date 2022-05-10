@@ -46,7 +46,7 @@ def minus1method():
 
 
 # even/odd method
-def evenoddmethod()
+def evenoddmethod():
     start = time.time()
     list = []
     for i in range(0, trys_per_method + 1):
@@ -85,3 +85,8 @@ def plus10minus1method():
     end = time.time()
     print("+10-1 method took " + str(round(end - start, 3)) + "s and " + str(round(mean(list), 2)) + " attempts")
 
+
+plus1method()
+minus1method()
+evenoddmethod()
+plus10minus1method()
