@@ -1,10 +1,11 @@
+from ast import Try
 import random, time
 from statistics import mean
 
 trys_per_method = 10000
 possible_passwords = 10000
 # default is 10000 for both
-
+print("This will calculate which method is the fastest to brute force a password with " + str(possible_passwords) + " combinations, " + str(trys_per_method) + " times")
 
 # +1 method
 def plus1method():
