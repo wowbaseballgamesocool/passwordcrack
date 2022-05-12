@@ -8,7 +8,7 @@ seconds_decimal = 3
 attempts_decimal = 2
 
 
-try: trys_per_method = int(sys.argv[2]); possible_passwords = int(sys.argv[1]); seconds_decimal = int(sys.argv[3]); attempts_decimal = int(sys.argv[4])# + 1 # for use in terminal [ > crack.py 10000 10000 3 2 ]
+try: trys_per_method = int(sys.argv[2]); possible_passwords = int(sys.argv[1]); seconds_decimal = int(sys.argv[3]); attempts_decimal = int(sys.argv[4]) # for use in terminal [ > crack.py 10000 10000 ]
 except: pass
 
 print("This will calculate which method is the fastest to brute force a password with " + str(possible_passwords) + " combinations, " + str(trys_per_method) + " times")
@@ -97,3 +97,4 @@ plus1method()
 minus1method()
 evenoddmethod()
 plus10minus1method()
+time.sleep(999)
