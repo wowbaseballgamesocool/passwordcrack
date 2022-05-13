@@ -1,5 +1,6 @@
-import random, time
+from time import time, sleep
 from sys import argv
+from random import randint
 trys_per_method = 10000
 possible_passwords = 10000
 # default is 10000 for both
@@ -15,30 +16,27 @@ print("This will calculate which method is the fastest to brute force a password
 
 # +1 method
 def plus1method():
-    start = time.time()
-    list = []
+    start = time()
     attempts = 1
     for i in range(0, trys_per_method + 1):
-        password = random.randint(1, possible_passwords)
+        password = randint(1, possible_passwords)
         x = 1
-        
         while x != password:
             x += 1
             attempts += 1
         
         
-    end = time.time()
+    end = time()
     print("+1 method took " + str(round(end - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
 
 
 
 # -1 method
 def minus1method():
-    start = time.time()
-    list = []
+    start = time()
     attempts = 1
     for i in range(0, trys_per_method + 1):
-        password = random.randint(1, possible_passwords)
+        password = randint(1, possible_passwords)
         x = possible_passwords
         
         while x != password:
@@ -46,7 +44,7 @@ def minus1method():
             attempts += 1
         
         
-    end = time.time()
+    end = time()
     print("-1 method took " + str(round(end - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
 
 
@@ -54,11 +52,10 @@ def minus1method():
 
 # even/odd method
 def evenoddmethod():
-    start = time.time()
-    list = []
+    start = time()
     attempts = 1
     for i in range(0, trys_per_method + 1):
-        password = random.randint(0, possible_passwords - 1)
+        password = randint(0, possible_passwords - 1)
         x = 0
         
         while x != password:
@@ -67,7 +64,7 @@ def evenoddmethod():
             if x > possible_passwords: x = 1
 
         
-    end = time.time()
+    end = time()
     print("even/odd method took " + str(round(end - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
 
 
@@ -75,21 +72,20 @@ def evenoddmethod():
 # +10-1 method
 # this method goes up by 10 each time, then 9, then 8 and so on
 def plus10minus1method():
-    start = time.time()
-    list = []
+    start = time()
+    
     attempts = 1
     for i in range(0, trys_per_method + 1):
-        password = random.randint(0, possible_passwords - 1)
+        password = randint(0, possible_passwords - 1)
         x = 0
         mode = 0
-        
         while x != password:
             x += 10 - mode
             attempts += 1
             if x > possible_passwords: mode += 1; x = 0
 
         
-    end = time.time()
+    end = time()
     print("+10-1 method took " + str(round(end - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
 
 
@@ -97,4 +93,4 @@ plus1method()
 minus1method()
 evenoddmethod()
 plus10minus1method()
-time.sleep(999)
+#sleep(999)
