@@ -24,7 +24,7 @@ function plus1method()
     end
   runtime = runtime + 1
   end
-  print("+1 method took ", (math.floor(attempts / 27 + 0.5)), " attempts")
+  print("+1 method took", (math.floor(attempts / 27 + 0.5)), "attempts")
   end
 
 
@@ -43,7 +43,7 @@ function minus1method()
   
   runtime = runtime + 1
   end
-  print("-1 method took ", (math.floor(attempts / 27 + 0.5)), " attempts")
+  print("-1 method took", (math.floor(attempts / 27 + 0.5)), "attempts")
   end
 
 function evenoddmethod()
@@ -61,21 +61,24 @@ function evenoddmethod()
     end
   runtime = runtime + 1
   end
-  print("even/odd method took ", (math.floor(attempts / 27 + 0.5)), " attempts")
+  print("even/odd method took", (math.floor(attempts / 27 + 0.5)), "attempts")
   end
 
-
-
-
-
-
-
-
-
-
-
-
-plus1method()
-minus1method()
-evenoddmethod()
+function plus10minus1method()
+  local runtime = 1
+  local attempts = 1
+  --for i= 1, 27 do
+  while runtime < 27 do
+    local mode = 0
+    local x = 0
+    password = math.floor(rand() * 100)
+    while x ~= password do
+      x = x + 10 - mode
+      attempts = attempts + 1
+      if x > 100 then x = 1; mode = mode + 1 end
+    end
+  runtime = runtime + 1
+  end
+  print("+10-1 method took", (math.floor(attempts / 27 + 0.5)), "attempts")
+  end
 
