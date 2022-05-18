@@ -10,7 +10,7 @@ function rand()
     return V/D40
   end
 
-function Method()
+function plus1method()
   local runtime = 1
   local attempts = 1
   --for i= 1, 27 do
@@ -24,10 +24,58 @@ function Method()
     end
   runtime = runtime + 1
   end
-  print((math.floor(attempts / 27 + 0.5)))
+  print("+1 method took ", (math.floor(attempts / 27 + 0.5)), " attempts")
+  end
+
+
+function minus1method()
+  local runtime = 1
+  local attempts = 1
+  --for i= 1, 27 do
+  while runtime < 27 do
+
+    local x = 100
+    password = math.floor(rand() * 100)
+    while x ~= password do
+      x = x - 1
+      attempts = attempts + 1
+    end
+  
+  runtime = runtime + 1
+  end
+  print("-1 method took ", (math.floor(attempts / 27 + 0.5)), " attempts")
+  end
+
+function evenoddmethod()
+  local runtime = 1
+  local attempts = 1
+  --for i= 1, 27 do
+  while runtime < 27 do
+
+    local x = 0
+    password = math.floor(rand() * 100)
+    while x ~= password do
+      x = x + 2
+      attempts = attempts + 1
+      if x > 27 then x = 1 end
+    end
+  runtime = runtime + 1
+  end
+  print("even/odd method took ", (math.floor(attempts / 27 + 0.5)), " attempts")
   end
 
 
 
-Method()
+
+
+
+
+
+
+
+
+
+plus1method()
+minus1method()
+--evenoddmethod()
 
