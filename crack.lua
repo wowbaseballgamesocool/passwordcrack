@@ -57,7 +57,7 @@ function evenoddmethod()
     while x ~= password do
       x = x + 2
       attempts = attempts + 1
-      if x > 27 then x = 1 end
+      if x > 100 then x = 1 end
     end
   runtime = runtime + 1
   end
@@ -77,5 +77,5 @@ function evenoddmethod()
 
 plus1method()
 minus1method()
---evenoddmethod()
+evenoddmethod()
 
