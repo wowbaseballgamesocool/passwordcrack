@@ -3,7 +3,7 @@ from sys import argv
 from random import randint
 trys_per_method = 10000
 possible_passwords = 10000
-# default is 10000 for both
+    # default is 10000 for both
 
 seconds_decimal = 3
 attempts_decimal = 2
@@ -26,8 +26,8 @@ def plus1method():
             attempts += 1
         
         
-    end = time()
-    print("+1 method took " + str(round(end - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
+
+    print("+1 method took " + str(round(time() - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
 
 
 
@@ -43,9 +43,8 @@ def minus1method():
             x -= 1
             attempts += 1
         
-        
-    end = time()
-    print("-1 method took " + str(round(end - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
+
+    print("-1 method took " + str(round(time() - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
 
 
 
@@ -64,8 +63,8 @@ def evenoddmethod():
             if x > possible_passwords: x = 1
 
         
-    end = time()
-    print("even/odd method took " + str(round(end - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
+
+    print("even/odd method took " + str(round(time() - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
 
 
 
@@ -85,8 +84,8 @@ def plus10minus1method():
             if x > possible_passwords: mode += 1; x = 0
 
         
-    end = time()
-    print("+10-1 method took " + str(round(end - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
+
+    print("+10-1 method took " + str(round(time() - start, seconds_decimal)) + "s and " + str(round(attempts / trys_per_method, attempts_decimal)) + " attempts")
 
 
 plus1method()
