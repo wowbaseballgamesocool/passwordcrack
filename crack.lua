@@ -82,3 +82,11 @@ function plus10minus1method()
   print("+10-1 method took", (math.floor(attempts / 27 + 0.5)), "attempts")
   end
 
+
+
+
+
+plus1method()
+minus1method()
+evenoddmethod()
+plus10minus1method()
